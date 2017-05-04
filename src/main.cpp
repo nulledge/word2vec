@@ -87,8 +87,96 @@ int main(void)
     compress_corpus_into_voca();
     init_neural_network( N );
     train( test_time );
+    
+    matrix king, queen, man, woman;
+    king.resize(voca.size(), 1);
+    queen.resize(voca.size(), 1);
+    man.resize(voca.size(), 1);
+    woman.resize(voca.size(), 1);
+    {
+        string word = "king";
+        matrix *word_vector = &king;
+        word_pair test_set;
+        test_set.input_words.push_back(word);
+        test_set.output_words.push_back(word);
+        corpus.push_back(test_set);
 
-    const unsigned int test_case = 9;
+        unsigned int test_case = corpus.size() - 1;
+        init_input_layer(test_case);
+        feed_forwarding(test_case);
+        for(unsigned int i = 0; i < voca.size(); i ++)
+        {
+            word_vector->component[i][0] = output_layer.value.component[i][0];
+        }
+    }
+    {
+        string word = "queen";
+        matrix *word_vector = &queen;
+        word_pair test_set;
+        test_set.input_words.push_back(word);
+        test_set.output_words.push_back(word);
+        corpus.push_back(test_set);
+
+        unsigned int test_case = corpus.size() - 1;
+        init_input_layer(test_case);
+        feed_forwarding(test_case);
+        for(unsigned int i = 0; i < voca.size(); i ++)
+        {
+            word_vector->component[i][0] = output_layer.value.component[i][0];
+        }
+    }
+    {
+        string word = "man";
+        matrix *word_vector = &man;
+        word_pair test_set;
+        test_set.input_words.push_back(word);
+        test_set.output_words.push_back(word);
+        corpus.push_back(test_set);
+
+        unsigned int test_case = corpus.size() - 1;
+        init_input_layer(test_case);
+        feed_forwarding(test_case);
+        for(unsigned int i = 0; i < voca.size(); i ++)
+        {
+            word_vector->component[i][0] = output_layer.value.component[i][0];
+        }
+    }
+    {
+        string word = "woman";
+        matrix *word_vector = &woman;
+        word_pair test_set;
+        test_set.input_words.push_back(word);
+        test_set.output_words.push_back(word);
+        corpus.push_back(test_set);
+
+        unsigned int test_case = corpus.size() - 1;
+        init_input_layer(test_case);
+        feed_forwarding(test_case);
+        for(unsigned int i = 0; i < voca.size(); i ++)
+        {
+            word_vector->component[i][0] = output_layer.value.component[i][0];
+        }
+    }
+    matrix king2man, queen2woman;
+    king2man.resize(voca.size(), 1);
+    queen2woman.resize(voca.size(), 1);
+    for(unsigned int i = 0; i < voca.size(); i ++)
+    {
+        king2man.component[i][0] = man.component[i][0] - king.component[i][0];
+        queen2woman.component[i][0] = woman.component[i][0] - queen.component[i][0];
+    }
+    double multi = 0.f;
+    double x = 0.f, y = 0.f;
+    for(unsigned int i = 0; i < voca.size(); i ++)
+    {
+        multi += king2man.component[i][0] * queen2woman.component[i][0];
+        x += king2man.component[i][0] * king2man.component[i][0];
+        y += queen2woman.component[i][0] * queen2woman.component[i][0];
+    }
+    cout << "\tcosine similarity: \t" << multi / (sqrt(x)*sqrt(y));
+    cout << endl;
+
+/*    unsigned int test_case = corpus.size()-1;
     for(unsigned int test_case = 0; test_case < corpus.size(); test_case ++)
     {
         init_input_layer(test_case);
@@ -109,7 +197,7 @@ int main(void)
                 cout << '\t' << voca_index2word[i] << '(' << output_layer.value.component[i][0] << ')';
         }
         cout << endl;
-    }
+    }*/
 
 /*    cout << "\tinput_layer: ";
     for(unsigned int i = 0; i < voca.size(); i ++ ) {
