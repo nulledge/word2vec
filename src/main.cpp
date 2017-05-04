@@ -30,7 +30,7 @@ set<string> voca;
 map<string, unsigned int> voca_word2index;
 map<unsigned int, string> voca_index2word;
 const unsigned int N = 5;
-const double learning_rate = 0.2;
+const double learning_rate = 0.1;
 const int max_value = 32768;
 
 class matrix
@@ -84,25 +84,86 @@ int main(void)
     get_corpus();
     compress_corpus_into_voca();
     init_neural_network( N );
-    train( 1000 );
+    train( 2000 );
 
-    init_input_layer(0);
-    feed_forwarding(0);
-    cout << "\tinput: ";
-    for(auto it = corpus[0].input_words.begin();
-        it != corpus[0].input_words.end();
-        it++)
+    const unsigned int test_case = 9;
+    for(unsigned int test_case = 0; test_case < corpus.size(); test_case ++)
     {
-        cout << '\t' << (*it);
+        init_input_layer(test_case);
+        feed_forwarding(test_case);
+
+        cout << "\tinput: ";
+        for(auto it = corpus[test_case].input_words.begin();
+            it != corpus[test_case].input_words.end();
+            it++)
+        {
+            cout << '\t' << (*it);
+        }
+        cout << endl;
+        cout << "\toutput: ";
+        for(unsigned int i = 0; i < voca.size(); i ++)
+        {
+            if(output_layer.value.component[i][0] > 0.f)
+                cout << '\t' << voca_index2word[i] << '(' << output_layer.value.component[i][0] << ')';
+        }
+        cout << endl;
+    }
+
+/*    cout << "\tinput_layer: ";
+    for(unsigned int i = 0; i < voca.size(); i ++ ) {
+        if(input_layer.value.component[i][0] >= 0.f)
+            cout << "\tR";
+        else
+            cout << "\tB";
     }
     cout << endl;
-    cout << "\toutput: ";
+    cout << "\thidden_layer: ";
+    for(unsigned int i = 0; i < N; i ++ ) {
+        if(hidden_layer.value.component[i][0] >= 0.f)
+            cout << "\tR";
+        else
+            cout << "\tB";
+    }
+    cout << endl;
+    cout << "\toutput_layer: ";
+    for(unsigned int i = 0; i < voca.size(); i ++ ) {
+        if(output_layer.value.component[i][0] >= 0.f)
+            cout << "\tR";
+        else
+            cout << "\tB";
+    }
+    cout << endl;
+    cout << endl;
+
+
+    cout << "\tweight_input2hidden: " << endl;
     for(unsigned int i = 0; i < voca.size(); i ++)
     {
-        if(output_layer.value.component[i][0] > 0.f)
-            cout << '\t' << voca_index2word[i] << '(' << output_layer.value.component[i][0] << ')';
+        cout << '\t';
+        for(unsigned int j = 0; j < N; j ++)
+        {
+            if(weight_input2hidden.component[i][j] >= 0.f)
+                cout << "\tR";
+            else
+                cout << "\tB";
+        }
+        cout << endl;
     }
     cout << endl;
+    cout << "\tweight_hidden2output: " << endl;
+    for(unsigned int i = 0; i < N; i ++)
+    {
+        cout << '\t';
+        for(unsigned int j = 0; j < voca.size(); j ++)
+        {
+            if(weight_hidden2output.component[i][j] >= 0.f)
+                cout << "\tR";
+            else
+                cout << "\tB";
+        }
+        cout << endl;
+    }
+    cout << endl;*/
     return 0;
 }
 
@@ -446,7 +507,7 @@ void get_corpus(void)
 {
     cout << "get_corpus() begin" << endl;
 
-    ifstream input_stream("input.txt");
+    ifstream input_stream("input_KingAndQueen.txt");
     unsigned int count = 0U;
     while(input_stream.eof() == false)
     {
