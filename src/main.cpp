@@ -14,6 +14,10 @@ void get_corpus(void);
 void compress_corpus_into_voca(void);
 void init_neural_network(unsigned int hidden_layer_neuron_size);
 void train(unsigned int train_count);
+void init_input_layer(unsigned int corpus_index);
+void feed_forwarding(unsigned int corpus_index);
+void backpropagation(unsigned int corpus_index);
+void apply_weight();
 
 class word_pair
 {
@@ -27,7 +31,7 @@ map<string, unsigned int> voca_word2index;
 map<unsigned int, string> voca_index2word;
 const unsigned int N = 5;
 const double learning_rate = 0.2;
-const double max = 62
+const int max_value = 32768;
 
 class matrix
 {
@@ -57,7 +61,7 @@ public:
             component[i] = new double[column];
             for(unsigned int j = 0; j < column; j ++)
             {
-                component[i][j] = (double)(rand()%10000);
+                component[i][j] = (((double)(rand()%max_value))-0.5f)/((double)N);
             }
         }
     }
@@ -80,7 +84,25 @@ int main(void)
     get_corpus();
     compress_corpus_into_voca();
     init_neural_network( N );
-    train( 1 );
+    train( 1000 );
+
+    init_input_layer(0);
+    feed_forwarding(0);
+    cout << "\tinput: ";
+    for(auto it = corpus[0].input_words.begin();
+        it != corpus[0].input_words.end();
+        it++)
+    {
+        cout << '\t' << (*it);
+    }
+    cout << endl;
+    cout << "\toutput: ";
+    for(unsigned int i = 0; i < voca.size(); i ++)
+    {
+        if(output_layer.value.component[i][0] > 0.f)
+            cout << '\t' << voca_index2word[i] << '(' << output_layer.value.component[i][0] << ')';
+    }
+    cout << endl;
     return 0;
 }
 
@@ -130,9 +152,13 @@ void feed_forwarding(unsigned int corpus_index)
         output_layer.value.component[i][0] = exp(output_layer.value.component[i][0]);
         if(isinf(output_layer.value.component[i][0]))
         {
-            output_layer.value.component[i][0] = 
+            output_layer.value.component[i][0] = (double)max_value;
         }
         exp_sum += output_layer.value.component[i][0];
+    }
+    if(isinf(exp_sum))
+    {
+        exp_sum = (double)max_value;
     }
 
     // apply sigmoid on output
@@ -215,7 +241,7 @@ void train_implement(unsigned int corpus_index)
     feed_forwarding(corpus_index);
     backpropagation(corpus_index);
     apply_weight();
-
+/*
     cout << "\tinput: ";
     for(auto it = corpus[corpus_index].input_words.begin();
         it != corpus[corpus_index].input_words.end();
@@ -297,7 +323,7 @@ void train_implement(unsigned int corpus_index)
         cout << endl;
     }
     cout << endl;
-    cout << endl;
+    cout << endl;*/
 }
 
 void train(unsigned int train_count)
