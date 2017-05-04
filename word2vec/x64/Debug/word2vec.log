@@ -1,0 +1,21 @@
+﻿빌드 시작: 2017-05-04 오후 11:22:01
+     1>2 노드의 "C:\Users\KssSurf\Documents\GitHub\word2vec\word2vec\word2vec.vcxproj" 프로젝트(Build 대상)입니다.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt ..\src\main.cpp
+         main.cpp
+     1>c:\users\ksssurf\documents\github\word2vec\src\main.cpp(83): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>c:\users\ksssurf\documents\github\word2vec\src\main.cpp(343): warning C4267: '인수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>c:\users\ksssurf\documents\github\word2vec\src\main.cpp(346): warning C4267: '인수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>c:\users\ksssurf\documents\github\word2vec\src\main.cpp(347): warning C4267: '인수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>c:\users\ksssurf\documents\github\word2vec\src\main.cpp(349): warning C4267: '인수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>c:\users\ksssurf\documents\github\word2vec\src\main.cpp(350): warning C4267: '인수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>c:\users\ksssurf\documents\github\word2vec\src\main.cpp(351): warning C4267: '인수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>c:\users\ksssurf\documents\github\word2vec\src\main.cpp(352): warning C4267: '인수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\KssSurf\Documents\GitHub\word2vec\x64\Debug\word2vec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\KssSurf\Documents\GitHub\word2vec\x64\Debug\word2vec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\KssSurf\Documents\GitHub\word2vec\x64\Debug\word2vec.lib" /MACHINE:X64 x64\Debug\main.obj
+         word2vec.vcxproj -> C:\Users\KssSurf\Documents\GitHub\word2vec\x64\Debug\word2vec.exe
+     1>"C:\Users\KssSurf\Documents\GitHub\word2vec\word2vec\word2vec.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:02.40
