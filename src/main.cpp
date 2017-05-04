@@ -7,6 +7,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
+#include <limits>
 
 using namespace std;
 
@@ -31,7 +32,8 @@ map<string, unsigned int> voca_word2index;
 map<unsigned int, string> voca_index2word;
 const unsigned int N = 5;
 const double learning_rate = 0.1;
-const int max_value = 32768;
+const unsigned int test_time = 2000;
+const int max_value = RAND_MAX;
 
 class matrix
 {
@@ -61,7 +63,7 @@ public:
             component[i] = new double[column];
             for(unsigned int j = 0; j < column; j ++)
             {
-                component[i][j] = (((double)(rand()%max_value))-0.5f)/((double)N);
+                component[i][j] = (((double)rand()/max_value*2))-1.0f;
             }
         }
     }
@@ -84,7 +86,7 @@ int main(void)
     get_corpus();
     compress_corpus_into_voca();
     init_neural_network( N );
-    train( 2000 );
+    train( test_time );
 
     const unsigned int test_case = 9;
     for(unsigned int test_case = 0; test_case < corpus.size(); test_case ++)
@@ -507,7 +509,7 @@ void get_corpus(void)
 {
     cout << "get_corpus() begin" << endl;
 
-    ifstream input_stream("input_KingAndQueen.txt");
+    ifstream input_stream("input_KingAndQueenSymbol.txt");
     unsigned int count = 0U;
     while(input_stream.eof() == false)
     {
