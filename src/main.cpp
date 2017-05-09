@@ -33,17 +33,26 @@ map<unsigned int, string> voca_index2word;
 const unsigned int N = 5;
 const double learning_rate = 0.1;
 const unsigned int test_time = 2000;
-const int max_value = RAND_MAX;
 
 class matrix
 {
+// members.
 public:
-    double **component = nullptr;
-    matrix() {}
+    double **component;
+
+// constructors.
+public:
+    matrix()
+    {
+        // do nothing.
+    }
     matrix(unsigned int row, unsigned int column)
     {
         resize(row, column);
     }
+
+// methods.
+public:
     void resize(unsigned int row, unsigned int column)
     {
         // delete
@@ -63,7 +72,7 @@ public:
             component[i] = new double[column];
             for(unsigned int j = 0; j < column; j ++)
             {
-                component[i][j] = (((double)rand()/max_value*2))-1.0f;
+                component[i][j] = (((double)rand()/RAND_MAX*2))-1.0f;
             }
         }
     }
@@ -88,7 +97,7 @@ int main(void)
     init_neural_network( N );
     train( test_time );
     
-    matrix king, queen, man, woman;
+    /*matrix king, queen, man, woman;
     king.resize(voca.size(), 1);
     queen.resize(voca.size(), 1);
     man.resize(voca.size(), 1);
@@ -174,9 +183,9 @@ int main(void)
         y += queen2woman.component[i][0] * queen2woman.component[i][0];
     }
     cout << "\tcosine similarity: \t" << multi / (sqrt(x)*sqrt(y));
-    cout << endl;
+    cout << endl;*/
 
-/*    unsigned int test_case = corpus.size()-1;
+    unsigned int test_case = corpus.size();
     for(unsigned int test_case = 0; test_case < corpus.size(); test_case ++)
     {
         init_input_layer(test_case);
@@ -193,11 +202,11 @@ int main(void)
         cout << "\toutput: ";
         for(unsigned int i = 0; i < voca.size(); i ++)
         {
-            if(output_layer.value.component[i][0] > 0.f)
+            if(output_layer.value.component[i][0] > 0.1f)
                 cout << '\t' << voca_index2word[i] << '(' << output_layer.value.component[i][0] << ')';
         }
         cout << endl;
-    }*/
+    }
 
 /*    cout << "\tinput_layer: ";
     for(unsigned int i = 0; i < voca.size(); i ++ ) {
@@ -267,7 +276,9 @@ void init_input_layer(unsigned int corpus_index)
         it != corpus[corpus_index].input_words.end();
         it++)
     {
-        input_layer.value.component[voca_word2index[(*it)]][0] = 1.f ;/* / corpus[corpus_index].input_words.size(); */
+        input_layer.value.component[voca_word2index[(*it)]][0] =
+            1.f
+            / (double)corpus[corpus_index].input_words.size();
     }
 }
 void feed_forwarding(unsigned int corpus_index)
@@ -303,13 +314,13 @@ void feed_forwarding(unsigned int corpus_index)
         output_layer.value.component[i][0] = exp(output_layer.value.component[i][0]);
         if(isinf(output_layer.value.component[i][0]))
         {
-            output_layer.value.component[i][0] = (double)max_value;
+            output_layer.value.component[i][0] = (double)numeric_limits<double>::max();
         }
         exp_sum += output_layer.value.component[i][0];
     }
     if(isinf(exp_sum))
     {
-        exp_sum = (double)max_value;
+        exp_sum = (double)numeric_limits<double>::max();
     }
 
     // apply sigmoid on output
@@ -329,7 +340,9 @@ void backpropagation(unsigned int corpus_index)
         it != corpus[corpus_index].output_words.end();
         it++)
     {
-        output_layer.error.component[voca_word2index[(*it)]][0] -= 1.f;
+        output_layer.error.component[voca_word2index[(*it)]][0] -=
+            1.f
+            / (double)corpus[corpus_index].output_words.size();
     }
 
     // get gradient hidden2output
@@ -597,7 +610,7 @@ void get_corpus(void)
 {
     cout << "get_corpus() begin" << endl;
 
-    ifstream input_stream("input_KingAndQueenSymbol.txt");
+    ifstream input_stream("input_SkipGram.txt");
     unsigned int count = 0U;
     while(input_stream.eof() == false)
     {
