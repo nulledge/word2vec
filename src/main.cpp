@@ -97,31 +97,16 @@ void init_input_layer(unsigned int corpus_index)
 void feed_forwarding(unsigned int corpus_index)
 {
     // input2hidden
-    hidden_layer.value = VectorXd::Constant(N, 0.f);
     
-    for(auto it = corpus[corpus_index].input_words.begin();
-        it != corpus[corpus_index].input_words.end();
-        it++)
-    {
-        for(unsigned int i = 0; i < N; i ++)
-        {
-            hidden_layer.value(i) +=
-                weight_input2hidden(voca_word2index[(*it)], i)
-                / (double)corpus[corpus_index].input_words.size();
-        }
-    }
+    hidden_layer.value = (weight_input2hidden * input_layer.value).transpose();
 
     // hidden2output
+    output_layer.value = (weight_hidden2output * hidden_layer.value).transpose();
+
+    // get sigmoid
     double exp_sum = 0.f;
     for(unsigned int i = 0; i < voca.size(); i ++)
     {
-        output_layer.value(i) = 0.f;
-        for(unsigned int j = 0; j < N; j ++)
-        {
-            output_layer.value(i) +=
-                hidden_layer.value(j)
-                * weight_hidden2output(j, i);
-        }
         output_layer.value(i) = exp(output_layer.value(i));
         if(isinf(output_layer.value(i)))
         {
@@ -135,18 +120,13 @@ void feed_forwarding(unsigned int corpus_index)
     }
 
     // apply sigmoid on output
-    for(unsigned int i = 0; i < voca.size(); i ++)
-    {
-        output_layer.value(i) /= exp_sum;
-    }
+    output_layer.value /= exp_sum;
 }
 void backpropagation(unsigned int corpus_index)
 {
     // get loss value
-    for(unsigned int i = 0; i < voca.size(); i ++)
-    {
-        output_layer.error(i) = output_layer.value(i);
-    }
+    output_layer.error = output_layer.value;
+
     for(auto it = corpus[corpus_index].output_words.begin();
         it != corpus[corpus_index].output_words.end();
         it++)
@@ -157,22 +137,16 @@ void backpropagation(unsigned int corpus_index)
     }
 
     // get gradient hidden2output
-    hidden_layer.gradient = VectorXd::Constant(N, 0.f);
-    
-    for(unsigned int i = 0; i < voca.size(); i ++)
+    for(unsigned int i = 0; i < N; i += 1)
     {
-        for(unsigned int j = 0; j < N; j ++)
-        {
-            gradient_hidden2output(j, i) =
-                output_layer.error(i) * hidden_layer.value(j);
-            hidden_layer.gradient(j) +=
-                output_layer.error(i)
-                * weight_hidden2output(j, i);
-        }
+        gradient_hidden2output.col(i) = hidden_layer.value(i) * output_layer.error;
+        /*for(unsigned int j = 0; j < voca.size(); j += 1)
+            gradient_hidden2output(i, j) = output_layer.error(j) * hidden_layer.value(i);*/
     }
+    hidden_layer.gradient = (weight_hidden2output.transpose() * output_layer.error).transpose();
 
     // get gradient input2hidden
-    gradient_input2hidden = MatrixXd::Constant(voca.size(), N, 0.f);
+    gradient_input2hidden = MatrixXd::Constant(N, voca.size(), 0.f);
 
     for(auto it = corpus[corpus_index].input_words.begin();
         it != corpus[corpus_index].input_words.end();
@@ -180,7 +154,7 @@ void backpropagation(unsigned int corpus_index)
     {
         for(unsigned int i = 0; i < N; i ++)
         {
-            gradient_input2hidden(voca_word2index[(*it)], i) =
+            gradient_input2hidden(i, voca_word2index[(*it)]) =
                 hidden_layer.gradient(i)
                 / (double)corpus[corpus_index].input_words.size();
         }
@@ -188,18 +162,8 @@ void backpropagation(unsigned int corpus_index)
 }
 void apply_weight(void)
 {
-    for(unsigned int i = 0; i < voca.size(); i ++)
-    {
-        for(unsigned int j = 0; j < N; j ++)
-        {
-            weight_input2hidden(i, j) -=
-                learning_rate
-                * gradient_input2hidden(i, j);
-            weight_hidden2output(j, i) -=
-                learning_rate
-                * gradient_hidden2output(j, i);
-        }
-    }
+    weight_input2hidden -= learning_rate * gradient_input2hidden;
+    weight_hidden2output -= learning_rate * gradient_hidden2output;
 }
 
 void train_implement(unsigned int corpus_index)
@@ -225,26 +189,15 @@ void init_neural_network(unsigned int hidden_layer_neuron_size)
     cout << "init_neural_network() begin" << endl;
 
     input_layer.value = VectorXd::Random(voca.size());
-    hidden_layer.value = VectorXd::Random(hidden_layer_neuron_size);
-    hidden_layer.gradient = VectorXd::Random(hidden_layer_neuron_size);
+    hidden_layer.value = VectorXd::Random(N);
+    hidden_layer.gradient = VectorXd::Random(N);
     output_layer.value = VectorXd::Random(voca.size());
     output_layer.error = VectorXd::Random(voca.size());
 
-    weight_input2hidden = MatrixXd::Random(voca.size(), hidden_layer_neuron_size);
-    gradient_input2hidden = MatrixXd::Random(voca.size(), hidden_layer_neuron_size);
-    weight_hidden2output = MatrixXd::Random(hidden_layer_neuron_size, voca.size());
-    gradient_hidden2output = MatrixXd::Random(hidden_layer_neuron_size, voca.size());
-
-    /*input_layer.value.resize(voca.size(), 1);
-    hidden_layer.value.resize(hidden_layer_neuron_size, 1);
-    hidden_layer.gradient.resize(hidden_layer_neuron_size, 1);
-    output_layer.value.resize(voca.size(), 1);
-    output_layer.error.resize(voca.size(), 1);
-
-    weight_input2hidden.resize(voca.size(), hidden_layer_neuron_size);
-    gradient_input2hidden.resize(voca.size(), hidden_layer_neuron_size);
-    weight_hidden2output.resize(hidden_layer_neuron_size, voca.size());
-    gradient_hidden2output.resize(hidden_layer_neuron_size, voca.size());*/
+    weight_input2hidden = MatrixXd::Random(N, voca.size());
+    gradient_input2hidden = MatrixXd::Random(N, voca.size());
+    weight_hidden2output = MatrixXd::Random(voca.size(), N);
+    gradient_hidden2output = MatrixXd::Random(voca.size(), N);
 
     cout << "init_neural_network() finished" << endl;
 }
