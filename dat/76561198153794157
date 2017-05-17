@@ -1,0 +1,134 @@
+{
+	"response": {
+		"game_count": 31,
+		"games": [
+			{
+				"appid": 17430,
+				"playtime_forever": 500
+			},
+			{
+				"appid": 70110,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 12120,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 12250,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 105600,
+				"playtime_forever": 8319
+			},
+			{
+				"appid": 206690,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 12750,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 208480,
+				"playtime_forever": 922
+			},
+			{
+				"appid": 208090,
+				"playtime_forever": 76
+			},
+			{
+				"appid": 206420,
+				"playtime_forever": 933
+			},
+			{
+				"appid": 207140,
+				"playtime_forever": 247
+			},
+			{
+				"appid": 252950,
+				"playtime_forever": 35553
+			},
+			{
+				"appid": 253410,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 258010,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 286120,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 297080,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 304050,
+				"playtime_forever": 268
+			},
+			{
+				"appid": 312640,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 325880,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 730,
+				"playtime_2weeks": 117,
+				"playtime_forever": 71463
+			},
+			{
+				"appid": 341060,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 343780,
+				"playtime_forever": 351
+			},
+			{
+				"appid": 381210,
+				"playtime_forever": 5536
+			},
+			{
+				"appid": 395860,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 370240,
+				"playtime_2weeks": 995,
+				"playtime_forever": 1869
+			},
+			{
+				"appid": 432190,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 438040,
+				"playtime_forever": 7
+			},
+			{
+				"appid": 447970,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 453850,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 461880,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 462060,
+				"playtime_forever": 0
+			}
+		]
+		
+	}
+}

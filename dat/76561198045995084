@@ -1,0 +1,137 @@
+{
+	"response": {
+		"game_count": 32,
+		"games": [
+			{
+				"appid": 240,
+				"playtime_forever": 7035
+			},
+			{
+				"appid": 4000,
+				"playtime_forever": 6797
+			},
+			{
+				"appid": 320,
+				"playtime_forever": 3008
+			},
+			{
+				"appid": 340,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 500,
+				"playtime_forever": 148
+			},
+			{
+				"appid": 1250,
+				"playtime_forever": 2069
+			},
+			{
+				"appid": 35420,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 24840,
+				"playtime_forever": 21
+			},
+			{
+				"appid": 12100,
+				"playtime_forever": 7
+			},
+			{
+				"appid": 12110,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 12120,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 12170,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 12180,
+				"playtime_forever": 82
+			},
+			{
+				"appid": 12210,
+				"playtime_forever": 1019
+			},
+			{
+				"appid": 12220,
+				"playtime_forever": 940
+			},
+			{
+				"appid": 12230,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 12240,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 12250,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 55230,
+				"playtime_forever": 1867
+			},
+			{
+				"appid": 110800,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 243870,
+				"playtime_forever": 594
+			},
+			{
+				"appid": 262410,
+				"playtime_forever": 17
+			},
+			{
+				"appid": 550,
+				"playtime_forever": 524
+			},
+			{
+				"appid": 223530,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 271590,
+				"playtime_forever": 3709
+			},
+			{
+				"appid": 302830,
+				"playtime_forever": 391
+			},
+			{
+				"appid": 304930,
+				"playtime_forever": 7
+			},
+			{
+				"appid": 227940,
+				"playtime_forever": 19
+			},
+			{
+				"appid": 730,
+				"playtime_2weeks": 4,
+				"playtime_forever": 21551
+			},
+			{
+				"appid": 391460,
+				"playtime_forever": 19
+			},
+			{
+				"appid": 219640,
+				"playtime_forever": 28
+			}
+		]
+		
+	}
+}

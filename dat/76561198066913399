@@ -1,0 +1,133 @@
+{
+	"response": {
+		"game_count": 31,
+		"games": [
+			{
+				"appid": 4000,
+				"playtime_forever": 4562
+			},
+			{
+				"appid": 31280,
+				"playtime_forever": 137
+			},
+			{
+				"appid": 105600,
+				"playtime_forever": 12155
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 102700,
+				"playtime_forever": 35
+			},
+			{
+				"appid": 200210,
+				"playtime_forever": 8651
+			},
+			{
+				"appid": 265630,
+				"playtime_forever": 42
+			},
+			{
+				"appid": 216150,
+				"playtime_forever": 6
+			},
+			{
+				"appid": 224260,
+				"playtime_forever": 55
+			},
+			{
+				"appid": 72850,
+				"playtime_forever": 11627
+			},
+			{
+				"appid": 304050,
+				"playtime_forever": 71
+			},
+			{
+				"appid": 304930,
+				"playtime_forever": 1028
+			},
+			{
+				"appid": 306020,
+				"playtime_forever": 181
+			},
+			{
+				"appid": 322170,
+				"playtime_forever": 118
+			},
+			{
+				"appid": 326460,
+				"playtime_forever": 916
+			},
+			{
+				"appid": 730,
+				"playtime_forever": 11082
+			},
+			{
+				"appid": 355180,
+				"playtime_forever": 10
+			},
+			{
+				"appid": 306130,
+				"playtime_forever": 872
+			},
+			{
+				"appid": 361780,
+				"playtime_forever": 1
+			},
+			{
+				"appid": 362070,
+				"playtime_forever": 14
+			},
+			{
+				"appid": 373680,
+				"playtime_forever": 1
+			},
+			{
+				"appid": 291550,
+				"playtime_forever": 65
+			},
+			{
+				"appid": 391070,
+				"playtime_forever": 3
+			},
+			{
+				"appid": 407530,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 311210,
+				"playtime_forever": 435
+			},
+			{
+				"appid": 455130,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 431960,
+				"playtime_forever": 664
+			},
+			{
+				"appid": 444090,
+				"playtime_forever": 1296
+			},
+			{
+				"appid": 596350,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 489830,
+				"playtime_forever": 4928
+			},
+			{
+				"appid": 564710,
+				"playtime_2weeks": 25,
+				"playtime_forever": 997
+			}
+		]
+		
+	}
+}

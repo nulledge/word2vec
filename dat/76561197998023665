@@ -1,0 +1,136 @@
+{
+	"response": {
+		"game_count": 32,
+		"games": [
+			{
+				"appid": 10,
+				"playtime_forever": 630
+			},
+			{
+				"appid": 80,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 100,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 240,
+				"playtime_forever": 103454
+			},
+			{
+				"appid": 4000,
+				"playtime_forever": 62
+			},
+			{
+				"appid": 550,
+				"playtime_forever": 439
+			},
+			{
+				"appid": 223530,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 620,
+				"playtime_forever": 843
+			},
+			{
+				"appid": 49470,
+				"playtime_forever": 445
+			},
+			{
+				"appid": 8930,
+				"playtime_forever": 9865
+			},
+			{
+				"appid": 65800,
+				"playtime_forever": 536
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 201790,
+				"playtime_forever": 659
+			},
+			{
+				"appid": 730,
+				"playtime_forever": 117220
+			},
+			{
+				"appid": 204360,
+				"playtime_forever": 247
+			},
+			{
+				"appid": 221260,
+				"playtime_forever": 1
+			},
+			{
+				"appid": 48220,
+				"playtime_forever": 1867
+			},
+			{
+				"appid": 218230,
+				"playtime_forever": 184
+			},
+			{
+				"appid": 202090,
+				"playtime_forever": 31
+			},
+			{
+				"appid": 218620,
+				"playtime_forever": 1369
+			},
+			{
+				"appid": 213670,
+				"playtime_forever": 910
+			},
+			{
+				"appid": 301520,
+				"playtime_forever": 2560
+			},
+			{
+				"appid": 304930,
+				"playtime_forever": 134
+			},
+			{
+				"appid": 227940,
+				"playtime_forever": 18
+			},
+			{
+				"appid": 219740,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 322330,
+				"playtime_forever": 81
+			},
+			{
+				"appid": 299360,
+				"playtime_forever": 67
+			},
+			{
+				"appid": 539730,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 542970,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 542971,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 542972,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 493340,
+				"playtime_forever": 511
+			}
+		]
+		
+	}
+}
