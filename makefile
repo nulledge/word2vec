@@ -1,4 +1,4 @@
-CPPC=g++ -std=c++11
+CPPC=g++-7 -std=c++11 -fopenmp -O3
 CC=gcc
 MKDIR=mkdir
 OUTPUT=exe.out

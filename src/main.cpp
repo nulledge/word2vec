@@ -8,7 +8,9 @@
 #include <cstdlib>
 #include <ctime>
 #include <limits>
+#include <chrono>
 
+#include "Eigen/Core"
 #include "Eigen/Dense"
 
 using namespace Eigen;
@@ -33,9 +35,9 @@ vector<word_pair> corpus;
 set<string> voca;
 map<string, unsigned int> voca_word2index;
 map<unsigned int, string> voca_index2word;
-const unsigned int N = 5;
-const double learning_rate = 0.1;
-const unsigned int test_time = 2000;
+const unsigned int N = 2000;
+const double learning_rate = 0.0001;
+const unsigned int test_time = 10000;
 
 class layer
 {
@@ -50,6 +52,11 @@ MatrixXd gradient_input2hidden, gradient_hidden2output;
 
 int main(void)
 {
+    auto start_time = chrono::high_resolution_clock::now();
+    setNbThreads(0);
+    cout << "The number of threads(" << nbThreads() << ")" << endl;
+    initParallel();
+
     srand(time(NULL));
     get_corpus();
     compress_corpus_into_voca();
@@ -78,6 +85,11 @@ int main(void)
         }
         cout << endl;
     }
+
+    auto end_time = chrono::high_resolution_clock::now();
+    auto elapsed = end_time - start_time;
+    cout << "Running Time(" << elapsed.count() << ")" << endl;
+
     return 0;
 }
 
@@ -168,7 +180,8 @@ void train(unsigned int train_count)
     cout << "train() begin" << endl;
     for(unsigned int i = 0; i < train_count; i ++)
     {
-        train_implement(i % corpus.size());
+        for(unsigned int j = 0; j < corpus.size(); j ++)
+            train_implement(j);
     }
     cout << "train() finished" << endl;
 }
