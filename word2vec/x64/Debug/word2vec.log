@@ -1,18 +1,7 @@
-﻿빌드 시작: 2017-05-28 오후 5:11:38
-     1>2 노드의 "C:\Users\KssSurf\Documents\GitHub\word2vec\word2vec\word2vec.vcxproj" 프로젝트(Build 대상)입니다.
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\KssSurf\Documents\GitHub\word2vec\inc /nologo /W3 /WX- /sdl /Ox /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt ..\src\main.cpp
-     1>cl : 명령줄 warning D9007: '/Gm'에는 '/Zi 또는 /ZI'이(가) 있어야 합니다. 옵션이 무시됩니다.
-         main.cpp
-     1>c:\users\ksssurf\documents\github\word2vec\inc\eigen\src/Core/arch/CUDA/Half.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-     1>..\src\main.cpp(60): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>..\src\main.cpp(66): warning C4267: '초기화 중': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\KssSurf\Documents\GitHub\word2vec\x64\Debug\word2vec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\KssSurf\Documents\GitHub\word2vec\x64\Debug\word2vec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\KssSurf\Documents\GitHub\word2vec\x64\Debug\word2vec.lib" /MACHINE:X64 x64\Debug\main.obj
-         LINK : C:\Users\KssSurf\Documents\GitHub\word2vec\x64\Debug\word2vec.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
-         word2vec.vcxproj -> C:\Users\KssSurf\Documents\GitHub\word2vec\x64\Debug\word2vec.exe
-     1>"C:\Users\KssSurf\Documents\GitHub\word2vec\word2vec\word2vec.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
-
-빌드했습니다.
-
-경과 시간: 00:00:06.43
+﻿cl : Command line warning D9007: '/Gm' requires '/Zi or /ZI'; option ignored
+  main.cpp
+c:\users\kss\documents\github\word2vec\inc\eigen\src/Core/arch/CUDA/Half.h : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+..\src\main.cpp(61): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+..\src\main.cpp(67): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+..\src\main.cpp(197): warning C4018: '>=': signed/unsigned mismatch
+  word2vec.vcxproj -> C:\Users\KSS\Documents\GitHub\word2vec\x64\Debug\word2vec.exe

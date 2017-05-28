@@ -7,6 +7,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
+#include <ratio>
 #include <limits>
 #include <chrono>
 
@@ -86,9 +87,11 @@ int main(void)
         cout << endl;
     }
 
+	using namespace std::chrono;
+
     auto end_time = chrono::high_resolution_clock::now();
-    auto elapsed = end_time - start_time;
-    cout << "Running Time(" << elapsed.count() << ")" << endl;
+    auto elapsed = duration_cast<duration<double>>(end_time - start_time);
+    cout << "Running Time: " << elapsed.count() << "seconds" << endl;
 
     return 0;
 }
@@ -178,10 +181,30 @@ void train_implement(unsigned int corpus_index)
 void train(unsigned int train_count)
 {
     cout << "train() begin" << endl;
+
+	int trainRate = 0;
     for(unsigned int i = 0; i < train_count; i ++)
     {
         for(unsigned int j = 0; j < corpus.size(); j ++)
             train_implement(j);
+
+		int nowRate = (i+1) * 100 / train_count;
+		if (trainRate < nowRate) {
+			trainRate = nowRate;
+			cout << '\r' << "training... [";
+			for (unsigned int j = 1; j <= 10; j++)
+			{
+				if (trainRate / 10 >= j)
+					cout << "*";
+				else
+					cout << " ";
+			}
+			cout << "] " << trainRate << "%";
+
+			if (trainRate == 100)
+				cout << endl;
+		}
+			
     }
     cout << "train() finished" << endl;
 }
