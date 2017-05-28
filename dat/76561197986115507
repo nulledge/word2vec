@@ -1,0 +1,141 @@
+{
+	"response": {
+		"game_count": 33,
+		"games": [
+			{
+				"appid": 10,
+				"playtime_forever": 141238
+			},
+			{
+				"appid": 30,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 40,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 60,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 80,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 100,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 240,
+				"playtime_forever": 23707
+			},
+			{
+				"appid": 300,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 320,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 340,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 22350,
+				"playtime_forever": 3459
+			},
+			{
+				"appid": 2800,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 2810,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 2820,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 2840,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 2850,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 201310,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 730,
+				"playtime_forever": 166874
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 91
+			},
+			{
+				"appid": 6370,
+				"playtime_forever": 1364
+			},
+			{
+				"appid": 113400,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 218230,
+				"playtime_forever": 11
+			},
+			{
+				"appid": 223390,
+				"playtime_forever": 86
+			},
+			{
+				"appid": 239220,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 251970,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 222900,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 346900,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 339280,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 539730,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 542970,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 542971,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 542972,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 578080,
+				"playtime_2weeks": 1882,
+				"playtime_forever": 1882
+			}
+		]
+		
+	}
+}

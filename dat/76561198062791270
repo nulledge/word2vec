@@ -1,0 +1,135 @@
+{
+	"response": {
+		"game_count": 31,
+		"games": [
+			{
+				"appid": 550,
+				"playtime_forever": 1789
+			},
+			{
+				"appid": 223530,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 8930,
+				"playtime_2weeks": 205,
+				"playtime_forever": 3038
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 193
+			},
+			{
+				"appid": 11020,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 109600,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 202090,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 245550,
+				"playtime_forever": 627
+			},
+			{
+				"appid": 343450,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 218620,
+				"playtime_forever": 972
+			},
+			{
+				"appid": 7200,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 228760,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 232910,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 243360,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 24010,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 292120,
+				"playtime_forever": 132
+			},
+			{
+				"appid": 302830,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 304930,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 305260,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 222900,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 730,
+				"playtime_2weeks": 6,
+				"playtime_forever": 1304
+			},
+			{
+				"appid": 273350,
+				"playtime_forever": 1862
+			},
+			{
+				"appid": 331600,
+				"playtime_forever": 344
+			},
+			{
+				"appid": 411370,
+				"playtime_forever": 746
+			},
+			{
+				"appid": 431960,
+				"playtime_forever": 764
+			},
+			{
+				"appid": 453480,
+				"playtime_forever": 7727
+			},
+			{
+				"appid": 539730,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 542970,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 542971,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 542972,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 578080,
+				"playtime_2weeks": 812,
+				"playtime_forever": 812
+			}
+		]
+		
+	}
+}

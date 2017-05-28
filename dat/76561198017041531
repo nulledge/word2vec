@@ -1,0 +1,136 @@
+{
+	"response": {
+		"game_count": 32,
+		"games": [
+			{
+				"appid": 42700,
+				"playtime_forever": 437
+			},
+			{
+				"appid": 42710,
+				"playtime_forever": 1095
+			},
+			{
+				"appid": 42680,
+				"playtime_forever": 41
+			},
+			{
+				"appid": 42690,
+				"playtime_forever": 193
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 201700,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 99900,
+				"playtime_forever": 19
+			},
+			{
+				"appid": 203290,
+				"playtime_forever": 278
+			},
+			{
+				"appid": 230410,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 246280,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 44350,
+				"playtime_forever": 407
+			},
+			{
+				"appid": 222900,
+				"playtime_forever": 324
+			},
+			{
+				"appid": 252490,
+				"playtime_forever": 668
+			},
+			{
+				"appid": 252950,
+				"playtime_forever": 3
+			},
+			{
+				"appid": 255220,
+				"playtime_forever": 270
+			},
+			{
+				"appid": 202090,
+				"playtime_forever": 94
+			},
+			{
+				"appid": 49520,
+				"playtime_forever": 474
+			},
+			{
+				"appid": 208090,
+				"playtime_forever": 586
+			},
+			{
+				"appid": 550,
+				"playtime_forever": 6
+			},
+			{
+				"appid": 223530,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 282440,
+				"playtime_forever": 4
+			},
+			{
+				"appid": 285580,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 293560,
+				"playtime_forever": 12
+			},
+			{
+				"appid": 301520,
+				"playtime_forever": 10
+			},
+			{
+				"appid": 63380,
+				"playtime_forever": 16
+			},
+			{
+				"appid": 346110,
+				"playtime_forever": 482
+			},
+			{
+				"appid": 407530,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 307780,
+				"playtime_forever": 8
+			},
+			{
+				"appid": 378300,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 444090,
+				"playtime_forever": 13
+			},
+			{
+				"appid": 596350,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 273350,
+				"playtime_forever": 62
+			}
+		]
+		
+	}
+}

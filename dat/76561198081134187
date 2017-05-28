@@ -1,0 +1,132 @@
+{
+	"response": {
+		"game_count": 30,
+		"games": [
+			{
+				"appid": 4000,
+				"playtime_forever": 2328
+			},
+			{
+				"appid": 500,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 550,
+				"playtime_forever": 379
+			},
+			{
+				"appid": 223530,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 201700,
+				"playtime_forever": 89
+			},
+			{
+				"appid": 209080,
+				"playtime_forever": 96
+			},
+			{
+				"appid": 113400,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 230410,
+				"playtime_forever": 69
+			},
+			{
+				"appid": 248570,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 218620,
+				"playtime_forever": 433
+			},
+			{
+				"appid": 221910,
+				"playtime_forever": 43
+			},
+			{
+				"appid": 44350,
+				"playtime_forever": 122
+			},
+			{
+				"appid": 270850,
+				"playtime_forever": 202
+			},
+			{
+				"appid": 271590,
+				"playtime_2weeks": 1000,
+				"playtime_forever": 8286
+			},
+			{
+				"appid": 222880,
+				"playtime_forever": 762
+			},
+			{
+				"appid": 35450,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 236830,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 286690,
+				"playtime_forever": 585
+			},
+			{
+				"appid": 287390,
+				"playtime_forever": 240
+			},
+			{
+				"appid": 301520,
+				"playtime_forever": 140
+			},
+			{
+				"appid": 304930,
+				"playtime_forever": 24
+			},
+			{
+				"appid": 321040,
+				"playtime_forever": 328
+			},
+			{
+				"appid": 730,
+				"playtime_2weeks": 15,
+				"playtime_forever": 43969
+			},
+			{
+				"appid": 57300,
+				"playtime_forever": 32
+			},
+			{
+				"appid": 208650,
+				"playtime_2weeks": 894,
+				"playtime_forever": 1478
+			},
+			{
+				"appid": 444090,
+				"playtime_2weeks": 26,
+				"playtime_forever": 1869
+			},
+			{
+				"appid": 596350,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 447270,
+				"playtime_forever": 3
+			},
+			{
+				"appid": 319630,
+				"playtime_forever": 58
+			}
+		]
+		
+	}
+}

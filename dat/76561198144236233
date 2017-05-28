@@ -1,0 +1,130 @@
+{
+	"response": {
+		"game_count": 29,
+		"games": [
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 47410,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 109600,
+				"playtime_forever": 6
+			},
+			{
+				"appid": 113400,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 215120,
+				"playtime_forever": 2
+			},
+			{
+				"appid": 218230,
+				"playtime_forever": 19
+			},
+			{
+				"appid": 230410,
+				"playtime_2weeks": 1124,
+				"playtime_forever": 8664
+			},
+			{
+				"appid": 231060,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 243870,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 209870,
+				"playtime_forever": 1
+			},
+			{
+				"appid": 215100,
+				"playtime_forever": 4
+			},
+			{
+				"appid": 242720,
+				"playtime_forever": 18
+			},
+			{
+				"appid": 295550,
+				"playtime_forever": 30
+			},
+			{
+				"appid": 227700,
+				"playtime_forever": 78
+			},
+			{
+				"appid": 227940,
+				"playtime_2weeks": 101,
+				"playtime_forever": 146
+			},
+			{
+				"appid": 258160,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 323370,
+				"playtime_2weeks": 98,
+				"playtime_forever": 143
+			},
+			{
+				"appid": 730,
+				"playtime_2weeks": 206,
+				"playtime_forever": 17535
+			},
+			{
+				"appid": 333930,
+				"playtime_forever": 12
+			},
+			{
+				"appid": 339610,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 345520,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 39120,
+				"playtime_forever": 26
+			},
+			{
+				"appid": 372000,
+				"playtime_forever": 6
+			},
+			{
+				"appid": 389570,
+				"playtime_forever": 2
+			},
+			{
+				"appid": 444090,
+				"playtime_2weeks": 141,
+				"playtime_forever": 1665
+			},
+			{
+				"appid": 596350,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 273350,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 555570,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 506540,
+				"playtime_2weeks": 64,
+				"playtime_forever": 64
+			}
+		]
+		
+	}
+}

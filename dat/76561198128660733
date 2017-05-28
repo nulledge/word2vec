@@ -1,0 +1,131 @@
+{
+	"response": {
+		"game_count": 30,
+		"games": [
+			{
+				"appid": 4000,
+				"playtime_forever": 386
+			},
+			{
+				"appid": 33910,
+				"playtime_forever": 7
+			},
+			{
+				"appid": 8190,
+				"playtime_forever": 465
+			},
+			{
+				"appid": 105600,
+				"playtime_forever": 24705
+			},
+			{
+				"appid": 730,
+				"playtime_2weeks": 35,
+				"playtime_forever": 30675
+			},
+			{
+				"appid": 204360,
+				"playtime_forever": 1488
+			},
+			{
+				"appid": 113420,
+				"playtime_forever": 1
+			},
+			{
+				"appid": 212180,
+				"playtime_forever": 9
+			},
+			{
+				"appid": 236390,
+				"playtime_forever": 794
+			},
+			{
+				"appid": 265630,
+				"playtime_forever": 3958
+			},
+			{
+				"appid": 224260,
+				"playtime_forever": 11
+			},
+			{
+				"appid": 246280,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 242860,
+				"playtime_forever": 50
+			},
+			{
+				"appid": 242920,
+				"playtime_forever": 5821
+			},
+			{
+				"appid": 218620,
+				"playtime_forever": 1441
+			},
+			{
+				"appid": 252490,
+				"playtime_2weeks": 1314,
+				"playtime_forever": 185001
+			},
+			{
+				"appid": 221100,
+				"playtime_forever": 5120
+			},
+			{
+				"appid": 293540,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 295110,
+				"playtime_forever": 869
+			},
+			{
+				"appid": 362300,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 433850,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 439700,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 304050,
+				"playtime_forever": 1932
+			},
+			{
+				"appid": 304930,
+				"playtime_2weeks": 705,
+				"playtime_forever": 75745
+			},
+			{
+				"appid": 305620,
+				"playtime_forever": 52
+			},
+			{
+				"appid": 326460,
+				"playtime_forever": 424
+			},
+			{
+				"appid": 255710,
+				"playtime_forever": 976
+			},
+			{
+				"appid": 393420,
+				"playtime_forever": 382
+			},
+			{
+				"appid": 445900,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 466910,
+				"playtime_forever": 675
+			}
+		]
+		
+	}
+}

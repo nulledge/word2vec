@@ -1,0 +1,136 @@
+{
+	"response": {
+		"game_count": 31,
+		"games": [
+			{
+				"appid": 240,
+				"playtime_forever": 2099
+			},
+			{
+				"appid": 4000,
+				"playtime_forever": 5416
+			},
+			{
+				"appid": 17470,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 24740,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 550,
+				"playtime_forever": 19388
+			},
+			{
+				"appid": 223530,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 33910,
+				"playtime_forever": 4
+			},
+			{
+				"appid": 33930,
+				"playtime_forever": 52
+			},
+			{
+				"appid": 219540,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 17410,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 98200,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 108800,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 230410,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 224260,
+				"playtime_forever": 1831
+			},
+			{
+				"appid": 47790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 47830,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 252490,
+				"playtime_forever": 6569
+			},
+			{
+				"appid": 295110,
+				"playtime_forever": 111
+			},
+			{
+				"appid": 362300,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 433850,
+				"playtime_2weeks": 228,
+				"playtime_forever": 25620
+			},
+			{
+				"appid": 439700,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 304930,
+				"playtime_forever": 634
+			},
+			{
+				"appid": 63380,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 227940,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 321040,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 24240,
+				"playtime_forever": 356
+			},
+			{
+				"appid": 730,
+				"playtime_2weeks": 3332,
+				"playtime_forever": 45416
+			},
+			{
+				"appid": 271590,
+				"playtime_2weeks": 320,
+				"playtime_forever": 27184
+			},
+			{
+				"appid": 391460,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 578080,
+				"playtime_2weeks": 936,
+				"playtime_forever": 3130
+			}
+		]
+		
+	}
+}

@@ -1,0 +1,133 @@
+{
+	"response": {
+		"game_count": 31,
+		"games": [
+			{
+				"appid": 71340,
+				"playtime_forever": 607
+			},
+			{
+				"appid": 221640,
+				"playtime_forever": 158
+			},
+			{
+				"appid": 203160,
+				"playtime_forever": 616
+			},
+			{
+				"appid": 35720,
+				"playtime_forever": 263
+			},
+			{
+				"appid": 242760,
+				"playtime_forever": 343
+			},
+			{
+				"appid": 8930,
+				"playtime_forever": 1567
+			},
+			{
+				"appid": 271590,
+				"playtime_forever": 11157
+			},
+			{
+				"appid": 237930,
+				"playtime_forever": 241
+			},
+			{
+				"appid": 301610,
+				"playtime_forever": 531
+			},
+			{
+				"appid": 304930,
+				"playtime_forever": 236
+			},
+			{
+				"appid": 311690,
+				"playtime_forever": 3804
+			},
+			{
+				"appid": 730,
+				"playtime_forever": 47961
+			},
+			{
+				"appid": 7670,
+				"playtime_forever": 468
+			},
+			{
+				"appid": 8850,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 8870,
+				"playtime_forever": 455
+			},
+			{
+				"appid": 409710,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 409720,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 322330,
+				"playtime_forever": 6063
+			},
+			{
+				"appid": 292030,
+				"playtime_forever": 3074
+			},
+			{
+				"appid": 391540,
+				"playtime_forever": 667
+			},
+			{
+				"appid": 394510,
+				"playtime_forever": 3097
+			},
+			{
+				"appid": 57300,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 391220,
+				"playtime_forever": 1297
+			},
+			{
+				"appid": 363150,
+				"playtime_forever": 2396
+			},
+			{
+				"appid": 434650,
+				"playtime_forever": 995
+			},
+			{
+				"appid": 365590,
+				"playtime_forever": 9171
+			},
+			{
+				"appid": 524440,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 48000,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 273350,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 324810,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 578080,
+				"playtime_2weeks": 413,
+				"playtime_forever": 2560
+			}
+		]
+		
+	}
+}

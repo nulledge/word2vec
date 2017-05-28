@@ -1,0 +1,134 @@
+{
+	"response": {
+		"game_count": 31,
+		"games": [
+			{
+				"appid": 4000,
+				"playtime_forever": 6
+			},
+			{
+				"appid": 400,
+				"playtime_forever": 111
+			},
+			{
+				"appid": 12830,
+				"playtime_forever": 145
+			},
+			{
+				"appid": 550,
+				"playtime_forever": 295
+			},
+			{
+				"appid": 223530,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 24960,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 42650,
+				"playtime_forever": 554
+			},
+			{
+				"appid": 45740,
+				"playtime_forever": 213
+			},
+			{
+				"appid": 40800,
+				"playtime_forever": 30
+			},
+			{
+				"appid": 47870,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 105600,
+				"playtime_forever": 62
+			},
+			{
+				"appid": 55150,
+				"playtime_forever": 2634
+			},
+			{
+				"appid": 99300,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 213120,
+				"playtime_forever": 3855
+			},
+			{
+				"appid": 50650,
+				"playtime_forever": 1432
+			},
+			{
+				"appid": 730,
+				"playtime_2weeks": 112,
+				"playtime_forever": 14355
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 55230,
+				"playtime_forever": 3888
+			},
+			{
+				"appid": 220240,
+				"playtime_forever": 5991
+			},
+			{
+				"appid": 224260,
+				"playtime_forever": 58
+			},
+			{
+				"appid": 233270,
+				"playtime_forever": 607
+			},
+			{
+				"appid": 72850,
+				"playtime_2weeks": 330,
+				"playtime_forever": 330
+			},
+			{
+				"appid": 252490,
+				"playtime_forever": 241
+			},
+			{
+				"appid": 235800,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 264710,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 304930,
+				"playtime_forever": 177
+			},
+			{
+				"appid": 302590,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 265550,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 215470,
+				"playtime_forever": 33
+			},
+			{
+				"appid": 232090,
+				"playtime_forever": 15
+			},
+			{
+				"appid": 232150,
+				"playtime_forever": 0
+			}
+		]
+		
+	}
+}

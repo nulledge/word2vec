@@ -1,0 +1,133 @@
+{
+	"response": {
+		"game_count": 31,
+		"games": [
+			{
+				"appid": 240,
+				"playtime_forever": 15091
+			},
+			{
+				"appid": 4000,
+				"playtime_forever": 6310
+			},
+			{
+				"appid": 7940,
+				"playtime_forever": 1095
+			},
+			{
+				"appid": 550,
+				"playtime_forever": 60213
+			},
+			{
+				"appid": 223530,
+				"playtime_forever": 1890
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 224260,
+				"playtime_forever": 9716
+			},
+			{
+				"appid": 264380,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 253940,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 253960,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 269470,
+				"playtime_forever": 4022
+			},
+			{
+				"appid": 274920,
+				"playtime_forever": 282
+			},
+			{
+				"appid": 282440,
+				"playtime_forever": 692
+			},
+			{
+				"appid": 283660,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 285900,
+				"playtime_forever": 191
+			},
+			{
+				"appid": 302830,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 314450,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 322680,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 730,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 353330,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 355030,
+				"playtime_2weeks": 32,
+				"playtime_forever": 19250
+			},
+			{
+				"appid": 373770,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 380570,
+				"playtime_forever": 20
+			},
+			{
+				"appid": 384680,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 397570,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 403040,
+				"playtime_forever": 6
+			},
+			{
+				"appid": 417110,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 418280,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 427980,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 244930,
+				"playtime_forever": 476
+			},
+			{
+				"appid": 439910,
+				"playtime_forever": 0
+			}
+		]
+		
+	}
+}

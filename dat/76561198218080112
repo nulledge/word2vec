@@ -1,0 +1,33 @@
+{
+	"response": {
+		"game_count": 6,
+		"games": [
+			{
+				"appid": 38830,
+				"playtime_forever": 1
+			},
+			{
+				"appid": 99900,
+				"playtime_forever": 388
+			},
+			{
+				"appid": 304930,
+				"playtime_forever": 185
+			},
+			{
+				"appid": 205790,
+				"playtime_forever": 0
+			},
+			{
+				"appid": 730,
+				"playtime_2weeks": 898,
+				"playtime_forever": 17929
+			},
+			{
+				"appid": 339610,
+				"playtime_forever": 975
+			}
+		]
+		
+	}
+}
