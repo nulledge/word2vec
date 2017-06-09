@@ -40,6 +40,10 @@ const unsigned int N = 2000;
 const double learning_rate = 0.0001;
 const unsigned int test_time = 10000;
 
+#define __LOAD
+//#define __SAVE
+#define FILE_NAME "weights"
+
 class layer
 {
 public:
@@ -59,39 +63,83 @@ int main(void)
     initParallel();
 
     srand(time(NULL));
+
+    string word;
+
+#ifndef __LOAD
     get_corpus();
     compress_corpus_into_voca();
     init_neural_network( N );
     train( test_time );
 
-    unsigned int test_case = corpus.size();
-    for(unsigned int test_case = 0; test_case < corpus.size(); test_case ++)
+#else
+    ifstream file_in(FILE_NAME);
+    size_t voca_size = 0U;
+    unsigned int word_idx;
+    file_in >> voca_size;
+    for(unsigned int idx = 0; idx < voca_size; idx ++)
     {
-        init_input_layer(test_case);
-        feed_forwarding(test_case);
-
-        cout << "\tinput: ";
-        for(auto it = corpus[test_case].input_words.begin();
-            it != corpus[test_case].input_words.end();
-            it++)
-        {
-            cout << '\t' << (*it);
-        }
-        cout << endl;
-        cout << "\toutput: ";
-        for(unsigned int i = 0; i < voca.size(); i ++)
-        {
-            if(output_layer.value(i) > 0.1f)
-                cout << '\t' << voca_index2word[i] << '(' << output_layer.value(i) << ')';
-        }
-        cout << endl;
+        file_in >> word >> word_idx;
+        voca.insert(word);
+        voca_word2index[word] = word_idx;
+        voca_index2word[word_idx] = word;
     }
+    init_neural_network( N );
+    for(unsigned int i = 0; i < N; i ++)
+    {
+        for(unsigned int j = 0; j < voca_size; j ++)
+        {
+            file_in >> weight_input2hidden(i, j);
+        }
+    }
+    for(unsigned int i = 0; i < voca_size; i ++)
+    {
+        for(unsigned int j = 0; j < N; j ++)
+        {
+            file_in >> weight_hidden2output(i, j);
+        }
+    }
+    file_in.close();
+#endif
+
+    do {
+        cout << "enter word: ";
+        cin >> word;
+        if(voca_word2index.find(word) != voca_word2index.end())
+        {
+            // init input layer
+            input_layer.value = VectorXd::Zero(voca.size());
+            input_layer.value(voca_word2index[word]) = 1.f;
+
+            feed_forwarding(0);
+
+            for(unsigned int i = 0; i < voca.size(); i ++)
+            {
+                if(output_layer.value(i) > 0.1f)
+                    cout << '\t' << voca_index2word[i] << '(' << output_layer.value(i) << ')';
+            }
+            cout << endl << endl;
+        }
+    } while(word.compare("x"));
 
 	using namespace std::chrono;
 
     auto end_time = chrono::high_resolution_clock::now();
     auto elapsed = duration_cast<duration<double>>(end_time - start_time);
     cout << "Running Time: " << elapsed.count() << "seconds" << endl;
+
+#ifdef __SAVE
+    ofstream file_out(FILE_NAME);
+    file_out << voca.size() << endl;
+    for(auto it = voca.begin(); it != voca.end(); it ++)
+    {
+        file_out << *it << " " << voca_word2index[*it] << endl;
+    }
+    file_out << weight_input2hidden;
+    file_out << endl;
+    file_out << weight_hidden2output;
+    file_out.close();
+#endif
 
     return 0;
 }
@@ -232,31 +280,21 @@ void compress_corpus_into_voca(void)
     cout << "compress_corpus_into_voca() begin" << endl;
     for(auto it = corpus.begin(); it != corpus.end(); it++)
     {
-        cout << "\tinput:";
         for(auto input = (*it).input_words.begin(); input != (*it).input_words.end(); input++)
         {
-            cout << '\t' << (*input);
             voca.insert((*input));
         }
-        cout << endl;
-        cout << "\toutput:";
         for(auto output = (*it).output_words.begin(); output != (*it).output_words.end(); output++)
         {
-            cout << '\t' << (*output);
             voca.insert((*output));
         }
-        cout << endl;
-        cout << endl;
     }
-    cout << "\tvoca: ";
     unsigned int index = 0;
     for(auto it = voca.begin(); it != voca.end(); it++, index++)
     {
-        cout << '\t' << (*it);
         voca_word2index[(*it)] = index;
         voca_index2word[index] = (*it);
     }
-    cout << endl;
     cout << "\ttotal voca: " << voca.size() << endl;
     cout << "compress_corpus_into_voca() finished" << endl;
 }
