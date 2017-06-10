@@ -38,13 +38,16 @@ vector<word_pair> corpus;
 set<string> voca;
 map<string, unsigned int> voca_word2index;
 map<unsigned int, string> voca_index2word;
-const unsigned int N = 200;
+const unsigned int N = 100;
 const double learning_rate = 0.001;
 const unsigned int test_time = 1;
 
 #define __LOAD
-//#define __SAVE
-#define FILE_NAME "weights"
+#define __SAVE
+#ifdef __SAVE
+#define __TRAIN_IN_SAVE
+#endif
+#define FILE_NAME "weights.txt"
 
 class layer
 {
@@ -59,10 +62,10 @@ MatrixXd gradient_input2hidden, gradient_hidden2output;
 
 int main(void)
 {
+	initParallel();
     auto start_time = chrono::high_resolution_clock::now();
     setNbThreads(0);
     cout << "The number of threads(" << nbThreads() << ")" << endl;
-    initParallel();
 
     srand(time(NULL));
 
@@ -103,24 +106,31 @@ int main(void)
     file_in.close();
 #endif
 
+#ifdef __TRAIN_IN_SAVE
+	get_corpus();
+	train(test_time);
+#endif
+
     do {
         cout << "enter word: ";
         cin >> word;
-        if(voca_word2index.find(word) != voca_word2index.end())
-        {
-            // init input layer
-            input_layer.value = VectorXd::Zero(voca.size());
-            input_layer.value(voca_word2index[word]) = 1.f;
+		if (voca_word2index.find(word) != voca_word2index.end())
+		{
+			// init input layer
+			input_layer.value = VectorXd::Zero(voca.size());
+			input_layer.value(voca_word2index[word]) = 1.f;
 
-            feed_forwarding(0);
+			feed_forwarding(0);
 
-            for(unsigned int i = 0; i < voca.size(); i ++)
-            {
-                if(output_layer.value(i) > 0.01f)
-                    cout << '\t' << voca_index2word[i] << '(' << output_layer.value(i) << ')';
-            }
-            cout << endl << endl;
-        }
+			for (unsigned int i = 0; i < voca.size(); i++)
+			{
+				if (output_layer.value(i) > 0.1f)
+					cout << '\t' << voca_index2word[i] << '(' << output_layer.value(i) << ')';
+			}
+			cout << endl << endl;
+		}
+		else
+			cout << "cannot find item" << endl;
     } while(word.compare("x"));
 
 	using namespace std::chrono;
