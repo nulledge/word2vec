@@ -25,6 +25,7 @@ void init_input_layer(unsigned int corpus_index);
 void feed_forwarding(unsigned int corpus_index);
 void backpropagation(unsigned int corpus_index);
 void apply_weight();
+void displayPercent(string name, int i, int max);
 
 class word_pair
 {
@@ -38,7 +39,7 @@ map<string, unsigned int> voca_word2index;
 map<unsigned int, string> voca_index2word;
 const unsigned int N = 2000;
 const double learning_rate = 0.0001;
-const unsigned int test_time = 10000;
+const unsigned int test_time = 1;
 
 class layer
 {
@@ -64,6 +65,7 @@ int main(void)
     init_neural_network( N );
     train( test_time );
 
+	/*
     unsigned int test_case = corpus.size();
     for(unsigned int test_case = 0; test_case < corpus.size(); test_case ++)
     {
@@ -86,12 +88,32 @@ int main(void)
         }
         cout << endl;
     }
+	*/
 
 	using namespace std::chrono;
 
     auto end_time = chrono::high_resolution_clock::now();
     auto elapsed = duration_cast<duration<double>>(end_time - start_time);
     cout << "Running Time: " << elapsed.count() << "seconds" << endl;
+
+	while (1) {
+		string input;
+		cin >> input;
+
+		input_layer.value = VectorXd::Zero(voca.size());
+		input_layer.value(voca_word2index[input]) = 1.f;
+
+		feed_forwarding(0);
+
+		cout << "\toutput: ";
+		for (unsigned int i = 0; i < voca.size(); i++)
+		{
+			if (output_layer.value(i) > 0.1f)
+				cout << '\t' << voca_index2word[i] << '(' << output_layer.value(i) << ')';
+		}
+		cout << endl;
+		cout << endl;
+	}
 
     return 0;
 }
@@ -182,29 +204,16 @@ void train(unsigned int train_count)
 {
     cout << "train() begin" << endl;
 
-	int trainRate = 0;
     for(unsigned int i = 0; i < train_count; i ++)
     {
-        for(unsigned int j = 0; j < corpus.size(); j ++)
-            train_implement(j);
+		for (unsigned int j = 0; j < corpus.size(); j++)
+		{
+			train_implement(j);
 
-		int nowRate = (i+1) * 100 / train_count;
-		if (trainRate < nowRate) {
-			trainRate = nowRate;
-			cout << '\r' << "training... [";
-			for (unsigned int j = 1; j <= 10; j++)
-			{
-				if (trainRate / 10 >= j)
-					cout << "*";
-				else
-					cout << " ";
-			}
-			cout << "] " << trainRate << "%";
-
-			if (trainRate == 100)
-				cout << endl;
+			displayPercent("corpus", j, corpus.size());
 		}
-			
+
+		displayPercent("training", i, train_count);
     }
     cout << "train() finished" << endl;
 }
@@ -232,31 +241,31 @@ void compress_corpus_into_voca(void)
     cout << "compress_corpus_into_voca() begin" << endl;
     for(auto it = corpus.begin(); it != corpus.end(); it++)
     {
-        cout << "\tinput:";
+        //cout << "\tinput:";
         for(auto input = (*it).input_words.begin(); input != (*it).input_words.end(); input++)
         {
-            cout << '\t' << (*input);
+            //cout << '\t' << (*input);
             voca.insert((*input));
         }
-        cout << endl;
-        cout << "\toutput:";
+        //cout << endl;
+        //cout << "\toutput:";
         for(auto output = (*it).output_words.begin(); output != (*it).output_words.end(); output++)
         {
-            cout << '\t' << (*output);
+            //cout << '\t' << (*output);
             voca.insert((*output));
         }
-        cout << endl;
-        cout << endl;
+        //cout << endl;
+        //cout << endl;
     }
-    cout << "\tvoca: ";
+    //cout << "\tvoca: ";
     unsigned int index = 0;
     for(auto it = voca.begin(); it != voca.end(); it++, index++)
     {
-        cout << '\t' << (*it);
+        //cout << '\t' << (*it);
         voca_word2index[(*it)] = index;
         voca_index2word[index] = (*it);
     }
-    cout << endl;
+    //cout << endl;
     cout << "\ttotal voca: " << voca.size() << endl;
     cout << "compress_corpus_into_voca() finished" << endl;
 }
@@ -281,10 +290,12 @@ void get_corpus(void)
 {
     cout << "get_corpus() begin" << endl;
 
-    ifstream input_stream("input_SkipGram.txt");
+    ifstream input_stream("D:\\SkipGram.txt");
     unsigned int count = 0U;
     while(input_stream.eof() == false)
     {
+		displayPercent("Making Corpus...", count, 0);
+
         count += 1U;
         string str, input, output;
         input_stream >> str;
@@ -313,4 +324,44 @@ void get_corpus(void)
     cout << "\ttotal corpus: \t" << count << endl;
 
     cout << "get_corpus() finished" << endl;
+}
+
+void displayPercent(string name, int i, int max) {
+	static int trainRate = -1;
+
+	if (i == 0) {
+		trainRate = -1;
+	}
+
+	if (max == 0) {
+		int nowRate = 0;
+		while (i / 10 > 0) {
+			i = i / 10;
+			nowRate++;
+		}
+		if (trainRate < nowRate) {
+			trainRate = nowRate;
+			cout << '\r' << name << "... ";
+			cout << "10^" << trainRate;
+			cout << " lines";
+		}
+		return;
+	}
+
+	int nowRate = (i + 1) * 100 / max;
+	if (trainRate < nowRate) {
+		trainRate = nowRate;
+		cout << '\r' << name << "... [";
+		for (unsigned int j = 1; j <= 10; j++)
+		{
+			if (trainRate / 10 >= j)
+				cout << "*";
+			else
+				cout << " ";
+		}
+		cout << "] " << trainRate << "%";
+
+		if (trainRate == 100)
+			cout << endl;
+	}
 }
