@@ -10,6 +10,7 @@
 #include <ratio>
 #include <limits>
 #include <chrono>
+#include <omp.h>
 
 #include "Eigen/Core"
 #include "Eigen/Dense"
@@ -37,8 +38,8 @@ vector<word_pair> corpus;
 set<string> voca;
 map<string, unsigned int> voca_word2index;
 map<unsigned int, string> voca_index2word;
-const unsigned int N = 2000;
-const double learning_rate = 0.0001;
+const unsigned int N = 200;
+const double learning_rate = 0.001;
 const unsigned int test_time = 1;
 
 #define __LOAD
@@ -115,7 +116,7 @@ int main(void)
 
             for(unsigned int i = 0; i < voca.size(); i ++)
             {
-                if(output_layer.value(i) > 0.1f)
+                if(output_layer.value(i) > 0.01f)
                     cout << '\t' << voca_index2word[i] << '(' << output_layer.value(i) << ')';
             }
             cout << endl << endl;
@@ -230,9 +231,10 @@ void train(unsigned int train_count)
 {
     cout << "train() begin" << endl;
 
-    for(unsigned int i = 0; i < train_count; i ++)
+#pragma omp parallel for
+    for(int i = 0; i < train_count; i ++)
     {
-		for (unsigned int j = 0; j < corpus.size(); j++)
+		for (int j = 0; j < corpus.size(); j++)
 		{
 			train_implement(j);
 
@@ -306,8 +308,9 @@ void get_corpus(void)
 {
     cout << "get_corpus() begin" << endl;
 
-    ifstream input_stream("D:\\SkipGram.txt");
+    ifstream input_stream("D:\\SkipGram.txt", ifstream::in | ifstream::binary);
     unsigned int count = 0U;
+	
     while(input_stream.eof() == false)
     {
 		displayPercent("Making Corpus...", count, 0);
