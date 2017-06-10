@@ -1,7 +1,164 @@
 ﻿cl : Command line warning D9007: '/Gm' requires '/Zi or /ZI'; option ignored
   main.cpp
 c:\users\kss\documents\github\word2vec\inc\eigen\src/Core/arch/CUDA/Half.h : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
-..\src\main.cpp(62): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-..\src\main.cpp(213): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-..\src\main.cpp(357): warning C4018: '>=': signed/unsigned mismatch
-  word2vec.vcxproj -> C:\Users\KSS\Documents\GitHub\word2vec\x64\Debug\word2vec.exe
+..\src\main.cpp(66): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+..\src\main.cpp(239): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+..\src\main.cpp(270): error C2059: syntax error: '<<'
+..\src\main.cpp(272): error C2065: 'input': undeclared identifier
+..\src\main.cpp(272): error C2059: syntax error: ')'
+..\src\main.cpp(275): error C2065: 'input': undeclared identifier
+..\src\main.cpp(275): error C2059: syntax error: ';'
+..\src\main.cpp(279): error C2065: 'it': undeclared identifier
+..\src\main.cpp(279): error C2228: left of '.output_words' must have class/struct/union
+  ..\src\main.cpp(279): note: type is 'unknown-type'
+..\src\main.cpp(279): error C2228: left of '.begin' must have class/struct/union
+..\src\main.cpp(279): error C3536: 'output': cannot be used before it is initialized
+..\src\main.cpp(279): error C2228: left of '.end' must have class/struct/union
+..\src\main.cpp(282): error C2100: illegal indirection
+..\src\main.cpp(289): error C2059: syntax error: 'for'
+..\src\main.cpp(289): error C2143: syntax error: missing ')' before ';'
+..\src\main.cpp(289): error C2143: syntax error: missing ';' before '!='
+..\src\main.cpp(289): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+..\src\main.cpp(289): error C2143: syntax error: missing ';' before '++'
+..\src\main.cpp(289): error C2086: 'int it': redefinition
+  ..\src\main.cpp(289): note: see declaration of 'it'
+..\src\main.cpp(289): error C2059: syntax error: ')'
+..\src\main.cpp(290): error C2143: syntax error: missing ';' before '{'
+..\src\main.cpp(290): error C2447: '{': missing function header (old-style formal list?)
+..\src\main.cpp(296): error C2059: syntax error: '=='
+..\src\main.cpp(297): error C2143: syntax error: missing ')' before ';'
+..\src\main.cpp(297): error C2143: syntax error: missing ';' before '!='
+..\src\main.cpp(297): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+..\src\main.cpp(297): error C2143: syntax error: missing ';' before '++'
+..\src\main.cpp(297): error C2086: 'int input': redefinition
+  ..\src\main.cpp(297): note: see declaration of 'input'
+..\src\main.cpp(297): error C2059: syntax error: ')'
+..\src\main.cpp(298): error C2143: syntax error: missing ';' before '{'
+..\src\main.cpp(298): error C2447: '{': missing function header (old-style formal list?)
+..\src\main.cpp(301): error C2059: syntax error: 'for'
+..\src\main.cpp(301): error C2143: syntax error: missing ')' before ';'
+..\src\main.cpp(301): error C2143: syntax error: missing ';' before '!='
+..\src\main.cpp(301): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+..\src\main.cpp(301): error C2143: syntax error: missing ';' before '++'
+..\src\main.cpp(301): error C2086: 'int output': redefinition
+  ..\src\main.cpp(301): note: see declaration of 'output'
+..\src\main.cpp(301): error C2059: syntax error: ')'
+..\src\main.cpp(302): error C2143: syntax error: missing ';' before '{'
+..\src\main.cpp(302): error C2447: '{': missing function header (old-style formal list?)
+..\src\main.cpp(305): error C2059: syntax error: '}'
+..\src\main.cpp(305): error C2143: syntax error: missing ';' before '}'
+..\src\main.cpp(307): error C2059: syntax error: 'for'
+..\src\main.cpp(307): error C2143: syntax error: missing ')' before ';'
+..\src\main.cpp(307): error C2143: syntax error: missing ';' before '!='
+..\src\main.cpp(307): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+..\src\main.cpp(307): error C2086: 'int it': redefinition
+  ..\src\main.cpp(289): note: see declaration of 'it'
+..\src\main.cpp(307): error C2143: syntax error: missing ';' before '++'
+..\src\main.cpp(307): error C2059: syntax error: ')'
+..\src\main.cpp(308): error C2143: syntax error: missing ';' before '{'
+..\src\main.cpp(308): error C2447: '{': missing function header (old-style formal list?)
+..\src\main.cpp(312): error C2059: syntax error: '>>'
+..\src\main.cpp(314): error C2143: syntax error: missing ';' before '<<'
+..\src\main.cpp(314): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+..\src\main.cpp(315): error C2059: syntax error: '}'
+..\src\main.cpp(315): error C2143: syntax error: missing ';' before '}'
+..\src\main.cpp(318): error C2143: syntax error: missing ';' before '{'
+..\src\main.cpp(318): error C2447: '{': missing function header (old-style formal list?)
+..\src\main.cpp(335): error C2872: 'cout': ambiguous symbol
+  ..\src\main.cpp(314): note: could be 'int cout'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iostream(27): note: or       'std::ostream std::cout'
+..\src\main.cpp(335): error C2297: '<<': illegal, right operand has type 'const char [19]'
+..\src\main.cpp(335): error C2563: mismatch in formal parameter list
+..\src\main.cpp(335): error C2568: '<<': unable to resolve function overload
+  ..\src\main.cpp(335): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+..\src\main.cpp(347): error C3861: 'trim': identifier not found
+..\src\main.cpp(348): error C2228: left of '.first' must have class/struct/union
+  ..\src\main.cpp(348): note: type is 'unknown-type'
+..\src\main.cpp(349): error C2228: left of '.second' must have class/struct/union
+  ..\src\main.cpp(349): note: type is 'unknown-type'
+..\src\main.cpp(354): error C3861: 'trim': identifier not found
+..\src\main.cpp(355): error C2228: left of '.first' must have class/struct/union
+  ..\src\main.cpp(355): note: type is 'unknown-type'
+..\src\main.cpp(356): error C2228: left of '.second' must have class/struct/union
+  ..\src\main.cpp(356): note: type is 'unknown-type'
+..\src\main.cpp(359): error C3861: 'trim': identifier not found
+..\src\main.cpp(360): error C2228: left of '.first' must have class/struct/union
+  ..\src\main.cpp(360): note: type is 'unknown-type'
+..\src\main.cpp(361): error C2228: left of '.second' must have class/struct/union
+  ..\src\main.cpp(361): note: type is 'unknown-type'
+..\src\main.cpp(368): error C2872: 'cout': ambiguous symbol
+  ..\src\main.cpp(314): note: could be 'int cout'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iostream(27): note: or       'std::ostream std::cout'
+..\src\main.cpp(368): error C2297: '<<': illegal, right operand has type 'const char [17]'
+..\src\main.cpp(368): error C2563: mismatch in formal parameter list
+..\src\main.cpp(368): error C2568: '<<': unable to resolve function overload
+  ..\src\main.cpp(368): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+..\src\main.cpp(370): error C2872: 'cout': ambiguous symbol
+  ..\src\main.cpp(314): note: could be 'int cout'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iostream(27): note: or       'std::ostream std::cout'
+..\src\main.cpp(370): error C2297: '<<': illegal, right operand has type 'const char [22]'
+..\src\main.cpp(370): error C2563: mismatch in formal parameter list
+..\src\main.cpp(370): error C2568: '<<': unable to resolve function overload
+  ..\src\main.cpp(370): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+..\src\main.cpp(388): error C2872: 'cout': ambiguous symbol
+  ..\src\main.cpp(314): note: could be 'int cout'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iostream(27): note: or       'std::ostream std::cout'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<_Elem,_Tr> &std::operator <<(std::basic_ostream<_Elem,_Tr> &,const std::complex<_Other> &)': could not deduce template argument for 'std::basic_ostream<_Elem,_Tr> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\complex(1297): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\string(167): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::error_code &)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(1021): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &&,const _Ty &)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &&' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(983): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,unsigned char)': could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(973): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const unsigned char *)': could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(966): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,signed char)': could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(959): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const signed char *)': could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(952): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(913): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(866): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char)': could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(826): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char *)': could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(779): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,char)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(741): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const char *)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(694): note: see declaration of 'std::operator <<'
+..\src\main.cpp(388): error C2784: 'std::ostream &Eigen::operator <<(std::ostream &,const Eigen::DenseBase<Derived> &)': could not deduce template argument for 'const Eigen::DenseBase<Derived> &' from 'std::string'
+  c:\users\kss\documents\github\word2vec\inc\eigen\src/Core/IO.h(217): note: see declaration of 'Eigen::operator <<'
+..\src\main.cpp(388): error C2677: binary '<<': no global operator found which takes type 'std::string' (or there is no acceptable conversion)
+..\src\main.cpp(389): error C2872: 'cout': ambiguous symbol
+  ..\src\main.cpp(314): note: could be 'int cout'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iostream(27): note: or       'std::ostream std::cout'
+..\src\main.cpp(389): error C2297: '<<': illegal, right operand has type 'const char [4]'
+..\src\main.cpp(389): warning C4552: '<<': operator has no effect; expected operator with side-effect
+..\src\main.cpp(390): error C2872: 'cout': ambiguous symbol
+  ..\src\main.cpp(314): note: could be 'int cout'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iostream(27): note: or       'std::ostream std::cout'
+..\src\main.cpp(390): error C2297: '<<': illegal, right operand has type 'const char [7]'
+..\src\main.cpp(390): warning C4552: '<<': operator has no effect; expected operator with side-effect
+..\src\main.cpp(398): error C2872: 'cout': ambiguous symbol
+  ..\src\main.cpp(314): note: could be 'int cout'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iostream(27): note: or       'std::ostream std::cout'
+..\src\main.cpp(398): error C2784: 'std::basic_ostream<_Elem,_Tr> &std::operator <<(std::basic_ostream<_Elem,_Tr> &,const std::complex<_Other> &)': could not deduce template argument for 'std::basic_ostream<_Elem,_Tr> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\complex(1297): note: see declaration of 'std::operator <<'
+..\src\main.cpp(398): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\string(167): note: see declaration of 'std::operator <<'
+..\src\main.cpp(398): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::error_code &)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(1021): note: see declaration of 'std::operator <<'
+..\src\main.cpp(398): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &&,const _Ty &)': could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &&' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(983): note: see declaration of 'std::operator <<'
+..\src\main.cpp(398): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,unsigned char)': could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(973): note: see declaration of 'std::operator <<'
+..\src\main.cpp(398): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const unsigned char *)': could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(966): note: see declaration of 'std::operator <<'
+..\src\main.cpp(398): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,signed char)': could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'int'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(959): note: see declaration of 'std::operator <<'
+..\src\main.cpp(398): fatal error C1003: error count exceeds 100; stopping compilation
