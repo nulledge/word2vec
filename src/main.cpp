@@ -43,7 +43,7 @@ const double learning_rate = 0.001;
 const unsigned int test_time = 1;
 
 #define __LOAD
-#define __SAVE
+//#define __SAVE
 #ifdef __SAVE
 #define __TRAIN_IN_SAVE
 #endif
@@ -114,6 +114,69 @@ int main(void)
     do {
         cout << "enter word: ";
         cin >> word;
+
+		if (word == "sim") {
+			string first, second;
+			cin >> first >> second;
+
+			input_layer.value = VectorXd::Zero(voca.size());
+			input_layer.value(voca_word2index[first]) = 1.f;
+
+			feed_forwarding(0);
+
+			VectorXd firstVector = output_layer.value;
+
+			if (second == "all") {
+				vector<VectorXd> vecList;
+				for (int j = 0; j < voca.size(); j++)
+				{
+					input_layer.value = VectorXd::Zero(voca.size());
+					input_layer.value(j) = 1.f;
+
+					feed_forwarding(0);
+
+					VectorXd temp = output_layer.value;
+					vecList.push_back(temp);
+				}
+
+				int ranking[5];
+				float rankValue[5];
+				float max;
+				float min = 1;
+				for (int i = 0; i < 5; i++) {
+					max = 0;
+					for (int j = 0; j < voca.size(); j++)
+					{
+						float simValue = firstVector.dot(vecList[j]) / firstVector.norm() / vecList[j].norm();
+						if (simValue >= min) continue;
+
+						if (simValue > max) {
+							max = simValue;
+							ranking[i] = j;
+							rankValue[i] = simValue;
+						}
+					}
+					min = max;
+				}
+
+				for (int i = 0; i < 5; i++) {
+					cout << voca_index2word[ranking[i]] << ": " << rankValue[i] << endl;
+				}
+			}
+			else {
+				input_layer.value = VectorXd::Zero(voca.size());
+				input_layer.value(voca_word2index[second]) = 1.f;
+
+				feed_forwarding(0);
+
+				VectorXd secondVector = output_layer.value;
+
+				float simValue = firstVector.dot(secondVector) / firstVector.norm() / secondVector.norm();
+				cout << "Similarity with " << first << " and " << second << ": " << simValue << endl;
+			}
+			continue;
+		}
+
 		if (voca_word2index.find(word) != voca_word2index.end())
 		{
 			// init input layer
@@ -124,7 +187,7 @@ int main(void)
 
 			for (unsigned int i = 0; i < voca.size(); i++)
 			{
-				if (output_layer.value(i) > 0.1f)
+				if (output_layer.value(i) > 0.01f)
 					cout << '\t' << voca_index2word[i] << '(' << output_layer.value(i) << ')';
 			}
 			cout << endl << endl;
