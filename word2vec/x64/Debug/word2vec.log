@@ -1,10 +1,10 @@
 ﻿cl : Command line warning D9007: '/Gm' requires '/Zi or /ZI'; option ignored
   main.cpp
 c:\users\kss\documents\github\word2vec\inc\eigen\src/Core/arch/CUDA/Half.h : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
-..\src\main.cpp(70): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-..\src\main.cpp(150): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-..\src\main.cpp(174): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-..\src\main.cpp(308): warning C4018: '<': signed/unsigned mismatch
-..\src\main.cpp(314): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-..\src\main.cpp(449): warning C4018: '>=': signed/unsigned mismatch
+..\src\main.cpp(72): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+..\src\main.cpp(180): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+..\src\main.cpp(204): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+..\src\main.cpp(338): warning C4018: '<': signed/unsigned mismatch
+..\src\main.cpp(344): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+..\src\main.cpp(479): warning C4018: '>=': signed/unsigned mismatch
   word2vec.vcxproj -> C:\Users\KSS\Documents\GitHub\word2vec\x64\Debug\word2vec.exe

@@ -49,6 +49,8 @@ const unsigned int test_time = 1;
 #endif
 #define FILE_NAME "weights.txt"
 
+#define RANK_N 10
+
 class layer
 {
 public:
@@ -125,6 +127,34 @@ int main(void)
 			feed_forwarding(0);
 
 			VectorXd firstVector = output_layer.value;
+			
+			// testPosition
+			/*
+			input_layer.value = VectorXd::Zero(voca.size());
+			input_layer.value(voca_word2index["271590"]) = 1.f;
+
+			feed_forwarding(0);
+
+			firstVector = output_layer.value;
+			
+			input_layer.value = VectorXd::Zero(voca.size());
+			input_layer.value(voca_word2index["550"]) = 1.f;
+
+			feed_forwarding(0);
+
+			firstVector += output_layer.value;
+			*/
+			/*
+			input_layer.value = VectorXd::Zero(voca.size());
+			input_layer.value(voca_word2index["620"]) = 1.f;
+
+			feed_forwarding(0);
+
+			firstVector -= output_layer.value;
+			*/
+
+			firstVector.normalize();
+			
 
 			if (second == "all") {
 				vector<VectorXd> vecList;
@@ -139,11 +169,11 @@ int main(void)
 					vecList.push_back(temp);
 				}
 
-				int ranking[5];
-				float rankValue[5];
+				int ranking[RANK_N];
+				float rankValue[RANK_N];
 				float max;
 				float min = 1;
-				for (int i = 0; i < 5; i++) {
+				for (int i = 0; i < RANK_N; i++) {
 					max = 0;
 					for (int j = 0; j < voca.size(); j++)
 					{
@@ -159,7 +189,7 @@ int main(void)
 					min = max;
 				}
 
-				for (int i = 0; i < 5; i++) {
+				for (int i = 0; i < RANK_N; i++) {
 					cout << voca_index2word[ranking[i]] << ": " << rankValue[i] << endl;
 				}
 			}
