@@ -1,5 +1,4 @@
 import java.io.*;
-import java.net.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -18,16 +17,14 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		subDirList("D:/profile/new");
+		subDirList("./profile");
 	}
 	
 	public static void subDirList(String source){
 		File dir = new File(source);
 		File[] fileList = dir.listFiles();
-		int peopleCount = 0;
 		try{
-			BufferedWriter fw = new BufferedWriter(new FileWriter("D:/SkipGram.txt", true));
-			File f = new File("D:/SkipGram.txt");
+			BufferedWriter fw = new BufferedWriter(new FileWriter("./SkipGram.txt", true));
 			int exp = 0;
 			int expCnt = 1;
 			for(int i = 0 ; i < fileList.length ; i++){
@@ -50,7 +47,7 @@ public class MainClass {
 					if(games.size() <= 1) continue;
 					
 					if(games.size() > 10) {
-						games = games.subList(0, 5);
+						games = games.subList(0, 10);
 					}
 					
 					for(int index=0 ; index<games.size() ; index++) {
@@ -70,7 +67,7 @@ public class MainClass {
 					
 				}
 				else if(file.isDirectory()){
-					System.out.println("디렉토리 이름 = " + file.getName());
+					//System.out.println("디렉토리 이름 = " + file.getName());
 					// 서브디렉토리가 존재하면 재귀적 방법으로 다시 탐색
 					subDirList(file.getCanonicalPath().toString()); 
 				}
